@@ -23,8 +23,13 @@ GameObject:
   - component: {fileID: 114782504590596236}
   - component: {fileID: 61027013640696836}
   m_Layer: 0
+<<<<<<< HEAD:Assets/Prefabs/AllDirections.prefab
   m_Name: AllDirections
   m_TagString: Untagged
+=======
+  m_Name: Platform
+  m_TagString: EncounterObjects
+>>>>>>> d1a2a3a9b9455093f306d8160038f30cbe0f8f53:Assets/Prefabs/Platform.prefab
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
