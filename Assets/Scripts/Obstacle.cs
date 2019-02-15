@@ -16,7 +16,7 @@ public class Obstacle : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		Debug.Log("Sending death message");
+		//Debug.Log("Sending death message");
 		collision.gameObject.SendMessage("kill");
 	}
 }
