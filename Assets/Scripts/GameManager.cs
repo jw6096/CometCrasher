@@ -6,9 +6,15 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    uint currentLevel;
+    int currentLevel;
+    bool[] unlockedLevels;
 
-    public uint CurrentLevel
+    public bool[] UnlockedLevels
+    {
+        get { return unlockedLevels; }
+    }
+
+    public int CurrentLevel
     {
         get { return currentLevel; }
         set { currentLevel = value; }
@@ -39,6 +45,19 @@ public class GameManager : MonoBehaviour
     {
 		
 	}
+
+    public void UnlockLevel(uint level)
+    {
+        unlockedLevels[level] = true;
+    }
+
+    public void NextLevel()
+    {
+        if(unlockedLevels[currentLevel + 1] == true)
+        {
+            LoadLevel(currentLevel + 1);
+        }
+    }
 
     public void LoadLevel(int level)
     {
