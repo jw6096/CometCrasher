@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-       
+        currentLevel = 0;
 	}
 	
 	// Update is called once per frame
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        if(unlockedLevels[currentLevel + 1] == true)
+        if(unlockedLevels[currentLevel] == true)
         {
             LoadLevel(currentLevel + 1);
         }
