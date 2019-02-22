@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Menus : MonoBehaviour
 {
     public GameObject levelButtonsParent;
-    GameObject[] levelButtons;
+    Button[] levelButtons;
     GameManager gMan;
 
     public GameObject startButton;
@@ -30,7 +31,14 @@ public class Menus : MonoBehaviour
             }
         }
 
-        if(gMan.UnlockedLevels.Length > 1)
+        levelButtons = levelButtonsParent.GetComponentsInChildren<Button>();
+
+        //for (int i = 0; i < levelButtonsParent.transform.childCount; i++)
+        //{
+        //    levelButtons[i] = levelButtonsParent.transform.GetChild(i).gameObject;
+        //}
+
+        if (gMan.UnlockedLevels.Length > 1)
         {
             if (gMan.UnlockedLevels[1] == true)
             {
@@ -45,7 +53,32 @@ public class Menus : MonoBehaviour
         }
 
         ChangeMenu(0);
+
+        UpdateLevelLocks();
 	}
+
+    void UpdateLevelLocks()
+    {
+        int levelLength = gMan.UnlockedLevels.Length;
+        for(int i = 0; i < levelButtons.Length; i++)
+        {
+            if(i < levelLength)
+            {
+                if (gMan.UnlockedLevels[i] == true)
+                {
+                    levelButtons[i].GetComponent<Button>().interactable = true;
+                }
+                else
+                {
+                    levelButtons[i].GetComponent<Button>().interactable = false;
+                }
+            }
+            else
+            {
+                levelButtons[i].GetComponent<Button>().interactable = false;
+            }
+        }
+    }
 	
 	// Update is called once per frame
 	void Update ()
