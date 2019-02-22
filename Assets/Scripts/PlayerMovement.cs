@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour {
 #if UNITY_EDITOR
             if ((Input.GetKey("left") || Input.GetKey("a")) && !ud)
             {
-                sendMessage('l');
+                //sendMessage('l');
                 rigidbody2D.AddForce(new Vector2(-force, 0));
                 flying = true;
                 lr = false;
@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour {
 
             if ((Input.GetKey("right") || Input.GetKey("d")) && !ud)
             {
-                sendMessage('r');
+                //sendMessage('r');
                 rigidbody2D.AddForce(new Vector2(force, 0));
                 flying = true;
                 lr = false;
@@ -55,7 +55,7 @@ public class PlayerMovement : MonoBehaviour {
 
             if ((Input.GetKey("down") || Input.GetKey("s")) && !lr)
             {
-                sendMessage('d');
+                //sendMessage('d');
                 rigidbody2D.AddForce(new Vector2(0, -force));
                 flying = true;
                 ud = false;
@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour {
 
             if ((Input.GetKey("up") || Input.GetKey("w")) && !lr)
             {
-                sendMessage('u');
+                //sendMessage('u');
                 rigidbody2D.AddForce(new Vector2(0, force));
                 flying = true;
                 ud = false;
@@ -83,28 +83,28 @@ public class PlayerMovement : MonoBehaviour {
                 float deltaY = endPosition.y - startPosition.y;
                 if ((deltaX > 0.1f) && !ud) // swipe RIGHT
                 {
-                    sendMessage('r');
+                    //sendMessage('r');
                     rigidbody2D.AddForce(new Vector2(force, 0));
                     flying = true;
                     ud = lr;
                 }
                 else if ((deltaX < -0.1f) && !ud) // swipe LEFT
                 {
-                    sendMessage('l');
+                    //sendMessage('l');
                     rigidbody2D.AddForce(new Vector2(-force, 0));
                     flying = true;
                     lr = false;
                 }
                 else if ((deltaY > 0.1f) && !lr) // swipe UP
                 {
-                    sendMessage('u');
+                    //sendMessage('u');
                     rigidbody2D.AddForce(new Vector2(0, force));
                     flying = true;
                     ud = false;
                 }
                 else if ((deltaY < -0.1f) && !lr) // swipe DOWN
                 {
-                    sendMessage('d');
+                    //sendMessage('d');
                     rigidbody2D.AddForce(new Vector2(0, -force));
                     flying = true;
                     ud = false;
@@ -163,6 +163,7 @@ public class PlayerMovement : MonoBehaviour {
 		//Debug.Log("Deflect Right");
 		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.y, rigidbody2D.velocity.x);
 
+        /*
         if (rigidbody2D.velocity.x == 0)
         {
             if (rigidbody2D.velocity.y > 0)
@@ -185,6 +186,7 @@ public class PlayerMovement : MonoBehaviour {
                 sendMessage('l');
             }
         }
+        */
 	}
 
 	public void deflectLeft()
@@ -192,6 +194,7 @@ public class PlayerMovement : MonoBehaviour {
 		//Debug.Log("Deflect Left");
 		rigidbody2D.velocity = new Vector2(-rigidbody2D.velocity.y, -rigidbody2D.velocity.x);
 
+        /*
         if (rigidbody2D.velocity.x == 0)
         {
             if (rigidbody2D.velocity.y > 0)
@@ -214,6 +217,7 @@ public class PlayerMovement : MonoBehaviour {
                 sendMessage('l');
             }
         }
+        */
     }
     public void victory()
     {
