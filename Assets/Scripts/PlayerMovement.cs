@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 endPosition = Vector3.zero;
 
     public GameObject UI;
+    public GameObject UI2;
 
     // Use this for initialization
     void Start () {
@@ -111,7 +112,8 @@ public class PlayerMovement : MonoBehaviour {
 	public void kill() 
 	{
 		Debug.Log ("I Died Horribly");
-	}
+        UI2.SetActive(true);
+    }
 
 	public void resetFlying()
 	{
