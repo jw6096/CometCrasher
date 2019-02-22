@@ -24,16 +24,16 @@ public class Deflector : MonoBehaviour
         switch (x)
         {
             case 'l':
-                boxCollider.offset = new Vector2(-.08f, 0);
+                boxCollider.offset = new Vector2(-.5f, 0);
                 break;
             case 'r':
-                boxCollider.offset = new Vector2(.08f, 0);
+                boxCollider.offset = new Vector2(.5f, 0);
                 break;
             case 'u':
-                boxCollider.offset = new Vector2(0, .08f);
+                boxCollider.offset = new Vector2(0, .5f);
                 break;
             case 'd':
-                boxCollider.offset = new Vector2(0, -.08f);
+                boxCollider.offset = new Vector2(0, -.5f);
                 break;
             default:
                 boxCollider.offset = new Vector2(0, 0);
