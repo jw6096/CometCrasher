@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 startPosition = Vector3.zero;
     private Vector3 endPosition = Vector3.zero;
 
-
+    public GameObject UI;
 
     // Use this for initialization
     void Start () {
@@ -186,6 +186,7 @@ public class PlayerMovement : MonoBehaviour {
     public void victory()
     {
         Debug.Log("Victory!");
+        UI.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

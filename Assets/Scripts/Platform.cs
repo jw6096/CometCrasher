@@ -10,12 +10,6 @@ public class Platform : MonoBehaviour {
     {
         boxCollider = gameObject.GetComponent<BoxCollider2D>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-
-    }
 
     public void changeDir(char x)
     {
@@ -36,7 +30,6 @@ public class Platform : MonoBehaviour {
             default:
                 boxCollider.offset = new Vector2(0, 0);
                 break;
-
         }
     }
 
