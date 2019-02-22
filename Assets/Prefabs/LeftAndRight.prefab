@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 212197019480205836}
   - component: {fileID: 61731642251834856}
   - component: {fileID: 114952212510381074}
+  - component: {fileID: 114342853926983458}
   m_Layer: 0
   m_Name: LeftAndRight
-  m_TagString: Untagged
+  m_TagString: EncounterObjects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -65,8 +66,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9, y: 0.9}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &114342853926983458
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615363774100536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d308cffe44a26414288b39eaf79db9e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.25
 --- !u!114 &114952212510381074
 MonoBehaviour:
   m_ObjectHideFlags: 1
