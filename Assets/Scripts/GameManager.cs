@@ -58,9 +58,9 @@ public class GameManager : MonoBehaviour
 		
 	}
 
-    public void UnlockLevel(uint level)
+    public void UnlockLevel(int level)
     {
-        unlockedLevels[level] = true;
+        unlockedLevels[level-1] = true;
     }
 
     public void NextLevel()
@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
     {
         if (level <= levelCount)
         {
+            currentLevel = level;
             SceneManager.LoadScene(level);
         }
         else
