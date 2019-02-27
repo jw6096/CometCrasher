@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61911088655819952}
   - component: {fileID: 114649312809116360}
   m_Layer: 0
-  m_Name: DeflectorR
+  m_Name: DeflectorDR
   m_TagString: EncounterObjects
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
