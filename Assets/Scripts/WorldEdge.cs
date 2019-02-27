@@ -39,7 +39,7 @@ public class WorldEdge : MonoBehaviour {
                 {
                     yPos = y;
                 }
-                else if (y < 0 && x < yNeg)
+                else if (y < 0 && y < yNeg)
                 {
                     yNeg = y;
                 }
