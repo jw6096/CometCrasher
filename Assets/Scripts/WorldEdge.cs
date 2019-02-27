@@ -24,6 +24,8 @@ public class WorldEdge : MonoBehaviour {
                 float x = gObject.transform.position.x;
                 float y = gObject.transform.position.y;
 
+                //Debug.Log(gObject + ": " + x + ", " + y);
+
                 if (x > 0 && x > xPos)
                 {
                     xPos = x;
@@ -33,7 +35,7 @@ public class WorldEdge : MonoBehaviour {
                     xNeg = x;
                 }
 
-                if (y > 0 && x > yPos)
+                if (y > 0 && y > yPos)
                 {
                     yPos = y;
                 }
@@ -43,7 +45,10 @@ public class WorldEdge : MonoBehaviour {
                 }
             }
         }
-        
+
+        //Debug.Log("Xpos: " + xPos + "\n YPos: " + yPos);
+        //Debug.Log("Xneg: " + xNeg + "\n YNeg: " + yNeg);
+
         xPos += 3;
         yPos += 3;
         xNeg -= 3;
