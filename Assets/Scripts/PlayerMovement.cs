@@ -16,9 +16,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private Vector3 startPosition = Vector3.zero;
     private Vector3 endPosition = Vector3.zero;
-
-    public GameObject UI;
-    public GameObject UI2;
+    private UIHandler dummyGM;
 
     // Use this for initialization
     void Start () {
@@ -29,6 +27,7 @@ public class PlayerMovement : MonoBehaviour {
         lr = false;
 
         entities = GameObject.FindGameObjectsWithTag("EncounterObjects");
+        dummyGM = GameObject.FindWithTag("DummyGM").GetComponent<UIHandler>();
 	}
 
     // Update is called once per frame
@@ -138,7 +137,9 @@ public class PlayerMovement : MonoBehaviour {
 	public void kill() 
 	{
 		Debug.Log ("I Died Horribly");
-        UI2.SetActive(true);
+        rigidbody2D.velocity = Vector2.zero;
+        flying = false;
+        dummyGM.Failed();
     }
 
 	public void resetFlying()
@@ -218,7 +219,9 @@ public class PlayerMovement : MonoBehaviour {
     public void victory()
     {
         Debug.Log("Victory!");
-        UI.SetActive(true);
+        rigidbody2D.velocity = Vector2.zero;
+        flying = false;
+        dummyGM.Victory();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

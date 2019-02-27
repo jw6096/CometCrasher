@@ -6,6 +6,9 @@ TagManager:
   tags:
   - EncounterObjects
   - Backdrop
+  - LevelCompleteUI
+  - LevelFailedUI
+  - DummyGM
   layers:
   - Default
   - TransparentFX

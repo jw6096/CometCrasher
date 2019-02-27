@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114803370177988762}
   m_Layer: 0
   m_Name: DummyGMObject
-  m_TagString: Untagged
+  m_TagString: DummyGM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
