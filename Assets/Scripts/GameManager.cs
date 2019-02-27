@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         }
 
         unlockedLevels = new bool[levelCount];
-        UnlockLevel(0);
+        UnlockLevel(1);
     }
 
     // Use this for initialization
