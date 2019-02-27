@@ -1762,6 +1762,48 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed9330b48951ff04bbfb07550f12899b, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1001 &1653697850
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4419475053293642, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0b56d3269bb51cd419076eb6aff42e55, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1001 &1675664623
 Prefab:
   m_ObjectHideFlags: 0
@@ -2184,6 +2226,54 @@ Prefab:
     - target: {fileID: 4839494326789668, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291335945096256, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026823732746208, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657300407313828, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880084752784534, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039262217207612, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124122818139392, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001179844551900, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269673535830880, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700795241376732, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591008669953136, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443697915611824, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466414781217906, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
+      propertyPath: m_TagString
+      value: Backdrop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46d343d39c27bf40806b616e019c0e1, type: 2}
