@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public int levelCount;
-    int currentLevel;
+    public int currentLevel;
     bool[] unlockedLevels;
 
     public bool[] UnlockedLevels
@@ -65,10 +65,8 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        if(unlockedLevels[currentLevel] == true)
-        {
-            LoadLevel(currentLevel + 1);
-        }
+        UnlockLevel(currentLevel + 1);
+        LoadLevel(currentLevel + 1);
     }
 
     public void LoadLevel(int level)

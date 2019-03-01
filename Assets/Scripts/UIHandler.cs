@@ -23,9 +23,11 @@ public class UIHandler : MonoBehaviour
         gMan = GameManager.instance;
         LevelCompleteUI = GameObject.FindWithTag("LevelCompleteUI");
         LevelFailedUI = GameObject.FindWithTag("LevelFailedUI");
-        LevelCompleteUI.SetActive(false);
-        LevelFailedUI.SetActive(false);
-
+        if (LevelCompleteUI != null && LevelFailedUI != null)
+        {
+            LevelCompleteUI.SetActive(false);
+            LevelFailedUI.SetActive(false);
+        }
     }
 
     public void UnlockLevel(int level)

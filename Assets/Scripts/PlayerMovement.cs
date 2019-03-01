@@ -138,7 +138,6 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		Debug.Log ("I Died Horribly");
         rigidbody2D.velocity = Vector2.zero;
-        flying = false;
         dummyGM.Failed();
     }
 
@@ -220,7 +219,6 @@ public class PlayerMovement : MonoBehaviour {
     {
         Debug.Log("Victory!");
         rigidbody2D.velocity = Vector2.zero;
-        flying = false;
         dummyGM.Victory();
     }
 
