@@ -11,16 +11,20 @@ public class PlayerMovement : MonoBehaviour {
     private bool flying;
     private bool ud;
     private bool lr;
+    private bool facingLeft = true;
+    private bool facingUp = true;
 
     public float force;
 
     private Vector3 startPosition = Vector3.zero;
     private Vector3 endPosition = Vector3.zero;
     private UIHandler dummyGM;
+    private Animator anim;
 
     // Use this for initialization
     void Start () {
 		rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 		flying = false;
 
         ud = false;
@@ -31,11 +35,14 @@ public class PlayerMovement : MonoBehaviour {
 	}
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (!flying)
         {
 #if UNITY_EDITOR
+            float h = Input.GetAxis("Horizontal");
+            float v = Input.GetAxis("Vertical");
+
             if ((Input.GetKey("left") || Input.GetKey("a")) && !ud)
             {
                 sendMessage('l');
@@ -112,6 +119,19 @@ public class PlayerMovement : MonoBehaviour {
                 startPosition = Vector3.zero;
                 endPosition = Vector3.zero;
             }
+
+            anim.SetFloat("speedX", Mathf.Abs(rigidbody2D.velocity.x));
+            anim.SetFloat("speedY", Mathf.Abs(rigidbody2D.velocity.y));
+
+            if (h < 0 && facingLeft)
+                reverseImageHorizontal();
+            else if (h > 0 && !facingLeft)
+                reverseImageHorizontal();
+
+            if (v > 0 && !facingUp)
+                reverseImageVertical();
+            else if (v < 0 && facingUp)
+                reverseImageVertical();
         }
     }
 
@@ -226,4 +246,24 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		//flying = false;
 	}
+
+    void reverseImageHorizontal()
+    {
+        facingLeft = !facingLeft;
+
+        Vector3 theScale = rigidbody2D.transform.localScale;
+
+        theScale.x *= -1;
+        rigidbody2D.transform.localScale = theScale;
+    }
+
+    void reverseImageVertical()
+    {
+        facingUp = !facingUp;
+
+        Vector3 theScale = rigidbody2D.transform.localScale;
+
+        theScale.y *= -1;
+        rigidbody2D.transform.localScale = theScale;
+    }
 }
