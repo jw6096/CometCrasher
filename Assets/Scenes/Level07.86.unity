@@ -750,19 +750,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_RootOrder
@@ -871,6 +871,10 @@ Prefab:
     - target: {fileID: 224379436575543868, guid: 3c5a744f973a91743896536accf037fb,
         type: 2}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1471247572408492, guid: 3c5a744f973a91743896536accf037fb, type: 2}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -991,19 +995,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4302817827084826, guid: ccb4fd3e391022649a8bb2cef4522608, type: 2}
       propertyPath: m_RootOrder
