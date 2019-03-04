@@ -19,7 +19,7 @@ public class WorldEdge : MonoBehaviour {
 
         foreach (GameObject gObject in gameObjects)
         {
-            if (gObject.activeInHierarchy && gObject.tag != "Backdrop")
+            if (gObject.activeInHierarchy && gObject.tag != "Backdrop" && gObject.tag != "LevelFailedUI" && gObject.tag != "LevelCompleteUI")
             {
                 float x = gObject.transform.position.x;
                 float y = gObject.transform.position.y;
