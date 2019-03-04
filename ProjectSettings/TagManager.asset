@@ -9,6 +9,7 @@ TagManager:
   - LevelCompleteUI
   - LevelFailedUI
   - DummyGM
+  - Music
   layers:
   - Default
   - TransparentFX
