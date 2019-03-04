@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	private Rigidbody2D rigidbody2D;
     private GameObject[] entities;
+    private Animator anim;
 
     private bool flying;
     private bool ud;
@@ -21,6 +22,7 @@ public class PlayerMovement : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		rigidbody2D = gameObject.GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 		flying = false;
 
         ud = false;
@@ -33,6 +35,9 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        float h = Input.GetAxis("Horizontal");
+        float v = Input.GetAxis("Vertical");
+
         if (!flying)
         {
 #if UNITY_EDITOR
@@ -76,6 +81,7 @@ public class PlayerMovement : MonoBehaviour {
             {
                 endPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             }
+
             if (startPosition != endPosition && startPosition != Vector3.zero && endPosition != Vector3.zero)
             {
                 float deltaX = endPosition.x - startPosition.x;
@@ -113,6 +119,9 @@ public class PlayerMovement : MonoBehaviour {
                 endPosition = Vector3.zero;
             }
         }
+
+        anim.SetFloat("speedX", rigidbody2D.velocity.x);
+        anim.SetFloat("speedY", rigidbody2D.velocity.y);
     }
 
     private void sendMessage(char x)
