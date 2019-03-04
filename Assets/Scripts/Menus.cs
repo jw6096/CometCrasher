@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Menus : MonoBehaviour
 {
     public GameObject levelButtonsParent;
+    public GameObject levelButtonPrefab;
     Button[] levelButtons;
     GameManager gMan;
 
@@ -29,6 +30,17 @@ public class Menus : MonoBehaviour
             {
                 currentMenu = (uint)i;
             }
+        }
+
+        //Instantiate buttons for each existing level
+        for(int i = 1; i <= gMan.UnlockedLevels.Length; i++)
+        {
+            GameObject buttonTemp = Instantiate(levelButtonPrefab, levelButtonsParent.transform);
+
+            int tempInt = i;
+
+            buttonTemp.GetComponent<Button>().onClick.AddListener(delegate { gMan.LoadLevel(tempInt); });
+            buttonTemp.GetComponentInChildren<Text>().text = "Level " + i;
         }
 
         levelButtons = levelButtonsParent.GetComponentsInChildren<Button>();

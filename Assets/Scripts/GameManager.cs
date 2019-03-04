@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public int levelCount;
+    int levelCount;
     public int currentLevel;
     bool[] unlockedLevels;
 
@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this);
+
+        //Get how many levels there are
+        levelCount = SceneManager.sceneCountInBuildSettings - 1;
 
         //Handle potential error from no levels
         if (levelCount <= 0)
