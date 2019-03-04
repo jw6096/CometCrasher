@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour {
                     sendMessage('r');
                     rigidbody2D.AddForce(new Vector2(force, 0));
                     flying = true;
-                    ud = lr;
+                    lr = false;
                 }
                 else if ((deltaX < -0.1f) && !ud) // swipe LEFT
                 {
