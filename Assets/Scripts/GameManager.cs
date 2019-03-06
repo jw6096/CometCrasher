@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start ()
     {
-        currentLevel = 0;
+        currentLevel = 1;
 	}
 	
 	// Update is called once per frame
@@ -70,13 +70,13 @@ public class GameManager : MonoBehaviour
     {
         UnlockLevel(currentLevel + 1);
         LoadLevel(currentLevel + 1);
+        currentLevel++;
     }
 
     public void LoadLevel(int level)
     {
         if (level <= levelCount)
         {
-            currentLevel = level;
             SceneManager.LoadScene(level);
         }
         else
