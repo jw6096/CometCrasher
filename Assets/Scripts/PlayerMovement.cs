@@ -14,10 +14,12 @@ public class PlayerMovement : MonoBehaviour {
     private bool lr;
 
     public float force;
+    public float perspectiveZoomSpeed = 0.05f;   // The rate of change of the field of view in perspective mode.
 
     private Vector3 startPosition = Vector3.zero;
     private Vector3 endPosition = Vector3.zero;
     private UIHandler dummyGM;
+    private float sinceCameraZoom = 0;
 
     // Use this for initialization
     void Start () {
@@ -37,6 +39,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+ 
+        sinceCameraZoom += Time.deltaTime;
 
         if (!flying)
         {
@@ -73,11 +77,39 @@ public class PlayerMovement : MonoBehaviour {
                 ud = false;
             }
 #endif
+        }
+        // If there are two touches on the device...
+        if (Input.touchCount == 2)
+        {
+            // Store both touches.
+            Touch touchZero = Input.GetTouch(0);
+            Touch touchOne = Input.GetTouch(1);
+
+            // Find the position in the previous frame of each touch.
+            Vector2 touchZeroPrevPos = touchZero.position - touchZero.deltaPosition;
+            Vector2 touchOnePrevPos = touchOne.position - touchOne.deltaPosition;
+
+            // Find the magnitude of the vector (the distance) between the touches in each frame.
+            float prevTouchDeltaMag = (touchZeroPrevPos - touchOnePrevPos).magnitude;
+            float touchDeltaMag = (touchZero.position - touchOne.position).magnitude;
+
+            // Find the difference in the distances between each frame.
+            float deltaMagnitudeDiff = prevTouchDeltaMag - touchDeltaMag;
+
+            // Otherwise change the field of view based on the change in distance between the touches.
+            Camera.main.fieldOfView += deltaMagnitudeDiff * perspectiveZoomSpeed;
+
+            // Clamp the field of view to make sure it's between 20 and 75.
+            Camera.main.fieldOfView = Mathf.Clamp(Camera.main.fieldOfView, 15.0f, 75.0f);
+            sinceCameraZoom = 0;
+        }
+        else if (!flying && Input.touchCount == 1 && sinceCameraZoom >= 0.1f)
+        {
             if (Input.GetMouseButtonDown(0))    // swipe begins
             {
                 startPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             }
-            if (Input.GetMouseButtonUp(0))    // swipe ends
+            if (Input.GetMouseButtonUp(0))      // swipe ends
             {
                 endPosition = Camera.main.ScreenToViewportPoint(Input.mousePosition);
             }
@@ -119,7 +151,6 @@ public class PlayerMovement : MonoBehaviour {
                 endPosition = Vector3.zero;
             }
         }
-
         anim.SetFloat("speedX", rigidbody2D.velocity.x);
         anim.SetFloat("speedY", rigidbody2D.velocity.y);
     }
