@@ -54,12 +54,6 @@ public class GameManager : MonoBehaviour
     {
         currentLevel = 1;
 	}
-	
-	// Update is called once per frame
-	void Update ()
-    {
-		
-	}
 
     public void UnlockLevel(int level)
     {
@@ -70,7 +64,7 @@ public class GameManager : MonoBehaviour
     {
         UnlockLevel(currentLevel + 1);
         LoadLevel(currentLevel + 1);
-        currentLevel++;
+        //currentLevel++;
     }
 
     public void LoadLevel(int level)
@@ -78,6 +72,7 @@ public class GameManager : MonoBehaviour
         if (level <= levelCount)
         {
             SceneManager.LoadScene(level);
+            currentLevel = level;
         }
         else
         {
@@ -87,6 +82,20 @@ public class GameManager : MonoBehaviour
     public void LoadLevel(string levelName)
     {
         SceneManager.LoadScene(levelName);
+    }
+
+    public void ResumeGame()
+    {
+        int lastLevel = 0;
+        for (int i = 0; i < unlockedLevels.Length; i++)
+        {
+            if(unlockedLevels[i] == false)
+            {
+                LoadLevel(lastLevel);
+                return;
+            }
+            lastLevel++;
+        }
     }
     /// <summary>
     /// Loads the current level (in-game levels, not scenes)

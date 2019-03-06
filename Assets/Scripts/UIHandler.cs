@@ -11,6 +11,7 @@ public class UIHandler : MonoBehaviour
     GameManager gMan;
     private GameObject LevelCompleteUI;
     private GameObject LevelFailedUI;
+    private GameObject MenuUI;
 
     public GameManager GameManagerInstance
     {
@@ -23,6 +24,7 @@ public class UIHandler : MonoBehaviour
         gMan = GameManager.instance;
         LevelCompleteUI = GameObject.FindWithTag("LevelCompleteUI");
         LevelFailedUI = GameObject.FindWithTag("LevelFailedUI");
+        MenuUI = GameObject.FindWithTag("MenuButton");
         if (LevelCompleteUI != null && LevelFailedUI != null)
         {
             LevelCompleteUI.SetActive(false);
@@ -44,6 +46,11 @@ public class UIHandler : MonoBehaviour
     {
         GameManager.instance.LoadLevel(level);
     }
+
+    public void ResumeGame()
+    {
+        GameManager.instance.ResumeGame();
+    }
     public void LoadLevel(string levelName)
     {
         GameManager.instance.LoadLevel(levelName);
@@ -55,9 +62,11 @@ public class UIHandler : MonoBehaviour
     public void Victory()
     {
         LevelCompleteUI.SetActive(true);
+        MenuUI.SetActive(false);
     }
     public void Failed()
     {
         LevelFailedUI.SetActive(true);
+        MenuUI.SetActive(false);
     }
 }
