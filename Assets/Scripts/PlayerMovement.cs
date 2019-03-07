@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour {
 	private Rigidbody2D rigidbody2D;
     private GameObject[] entities;
     private Animator anim;
+    private AudioSource source;
 
     private bool flying;
     private bool ud;
@@ -20,6 +21,11 @@ public class PlayerMovement : MonoBehaviour {
     private Vector3 endPosition = Vector3.zero;
     private UIHandler dummyGM;
     private float sinceCameraZoom = 0;
+
+    private void Awake()
+    {
+        source = GetComponent<AudioSource>();
+    }
 
     // Use this for initialization
     void Start () {
@@ -176,8 +182,11 @@ public class PlayerMovement : MonoBehaviour {
 
 	public void kill() 
 	{
-		Debug.Log ("I Died Horribly");
+        source.Play();
+
+        Debug.Log ("I Died Horribly");
         rigidbody2D.velocity = Vector2.zero;
+
         dummyGM.Failed();
     }
 
