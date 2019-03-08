@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1049,6 +1049,16 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224057522987786204, guid: 3c5a744f973a91743896536accf037fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 1082.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 224057522987786204, guid: 3c5a744f973a91743896536accf037fb,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 536.86
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5a744f973a91743896536accf037fb, type: 2}
   m_IsPrefabAsset: 0
@@ -1283,6 +1293,16 @@ Prefab:
         type: 2}
       propertyPath: UI
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 82548238112679170, guid: 7bfd91325cf65944ea44f2901721ccb5,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 82548238112679170, guid: 7bfd91325cf65944ea44f2901721ccb5,
+        type: 2}
+      propertyPath: reverbZoneMixCustomCurve.m_Curve.Array.data[0].value
+      value: 1.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bfd91325cf65944ea44f2901721ccb5, type: 2}
