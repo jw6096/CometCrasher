@@ -2,22 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public enum PortalNum
 {
     Portal1,
     Portal2
 }
+*/
 
 public class Portal : MonoBehaviour {
 
-    public PortalNum portal;
+    //public PortalNum portal;
+    public GameObject targetPortal;
 
     private float cooldown = 0;
-    private List<GameObject> targets = new List<GameObject>();
+    //private List<GameObject> targets = new List<GameObject>();
 
 	// Use this for initialization
 	void Start ()
     {
+        /*
         GameObject[] temp = GameObject.FindObjectsOfType<GameObject>();
 
         foreach (GameObject obj in temp)
@@ -29,6 +33,30 @@ public class Portal : MonoBehaviour {
                     targets.Add(obj);
                 }
             }
+        }
+        */
+
+        if (!targetPortal)
+        {
+            Debug.Log("No portal specified. Trying to find portal to pair.");
+
+            GameObject[] temp = GameObject.FindGameObjectsWithTag("EncounterObjects");
+
+            foreach (GameObject obj in temp)
+            {
+                if (obj.GetComponent<Portal>() != null && obj != gameObject)
+                {
+                    targetPortal = obj;
+                }
+            }
+        }
+
+        if (!targetPortal)
+        {
+            Debug.Log("No portal found. Transitioning to platform for game integrity.");
+
+            gameObject.GetComponent<Platform>().enabled = true;
+            gameObject.GetComponent<Portal>().enabled = false;
         }
 	}
 	
@@ -43,19 +71,27 @@ public class Portal : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (cooldown <= 0)
+        if (enabled)
         {
-            int rand = Random.Range(0, targets.Count);
-
-            //Debug.Log("Sending landing message");
-            collision.gameObject.transform.position = targets[rand].transform.position;
-
-            foreach (GameObject obj in targets)
+            if (cooldown <= 0)
             {
-                obj.SendMessage("cool");
-            }
+                /*
+                int rand = Random.Range(0, targets.Count);
 
-            //collision.gameObject.SendMessage("landing");
+                //Debug.Log("Sending landing message");
+                collision.gameObject.transform.position = targets[rand].transform.position;
+
+                foreach (GameObject obj in targets)
+                {
+                    obj.SendMessage("cool");
+                }
+
+                //collision.gameObject.SendMessage("landing");
+                */
+
+                collision.gameObject.transform.position = targetPortal.transform.position;
+                targetPortal.SendMessage("cool");
+            }
         }
     }
 
