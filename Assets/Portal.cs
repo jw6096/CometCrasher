@@ -97,6 +97,6 @@ public class Portal : MonoBehaviour {
 
     private void cool()
     {
-        cooldown = 1;
+        cooldown = 0.25f;
     }
 }
