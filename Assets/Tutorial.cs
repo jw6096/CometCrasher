@@ -27,6 +27,7 @@ public class Tutorial : MonoBehaviour
         if (gameObject.transform.GetChild(4).GetComponent<Text>().text == "N/A")
         {
             gameObject.SetActive(false);
+            //fixed
         }
     }
 }
