@@ -11,6 +11,7 @@ TagManager:
   - DummyGM
   - Music
   - MenuButton
+  - TutorialUI
   layers:
   - Default
   - TransparentFX

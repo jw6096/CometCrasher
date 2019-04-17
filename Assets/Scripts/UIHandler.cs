@@ -11,6 +11,7 @@ public class UIHandler : MonoBehaviour
     GameManager gMan;
     private GameObject LevelCompleteUI;
     private GameObject LevelFailedUI;
+    private GameObject TutorialUI;
     private GameObject MenuUI;
 
     public GameManager GameManagerInstance
@@ -25,6 +26,7 @@ public class UIHandler : MonoBehaviour
         LevelCompleteUI = GameObject.FindWithTag("LevelCompleteUI");
         LevelFailedUI = GameObject.FindWithTag("LevelFailedUI");
         MenuUI = GameObject.FindWithTag("MenuButton");
+
         if (LevelCompleteUI != null && LevelFailedUI != null)
         {
             LevelCompleteUI.SetActive(false);
