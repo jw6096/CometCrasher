@@ -57,10 +57,16 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 		// Public so the user can add all user-created prefabs
 		public Tileset Tileset;
 
-		// ----- PRIVATE VARIABLES -----
+        // If the earth has been placed yet or not -- REQUIRED FOR LEVEL TO BE VALID
+        bool earthPlaced = false;
 
-		// Whether this script is enabled (false, if the user closes the window)
-		private bool _scriptEnabled = true;
+        // If the goal has been placed yet or not -- REQUIRED FOR LEVEL TO BE VALID
+        bool goalPlaced = false;
+
+        // ----- PRIVATE VARIABLES -----
+
+        // Whether this script is enabled (false, if the user closes the window)
+        private bool _scriptEnabled = true;
 
 		// Private variable to save the list of Transforms of the public Tileset
 		private List<Transform> _tiles;
@@ -264,16 +270,25 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 
 		// Method to switch selectedTile on tile selection
 		// Used by clickListeners in the UserInterface script
-		public void ButtonClick(int tileIndex) {
+		public void ButtonClick(int tileIndex)
+        {
 			SetSelectedTile(tileIndex);
 			if (_previewTile != null) {
 				DestroyImmediate(_previewTile.gameObject);
 			}
-
 			_previewTile = Instantiate(GetTiles()[_selectedTileIndex],
 				new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100),
 				Quaternion.identity);
-			foreach (Collider2D c in _previewTile.GetComponents<Collider2D>()) {
+            if(_previewTile.gameObject.GetComponent<Goal>() != null)
+            {
+                goalPlaced = true;
+            }
+            else if (_previewTile.gameObject.GetComponent<EarthPlatform>() != null)
+            {
+                earthPlaced = true;
+            }
+            foreach (Collider2D c in _previewTile.GetComponents<Collider2D>())
+            {
 				c.enabled = false;
 			}
 		}
@@ -389,7 +404,15 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 		}
 
 		private void DestroyBlock(int posX, int posY, int posZ) {
-			DestroyImmediate(_gameObjects[posX, posY, posZ].gameObject);
+            if (_gameObjects[posX, posY, posZ].gameObject.GetComponent<Goal>() != null)
+            {
+                goalPlaced = false;
+            }
+            else if (_gameObjects[posX, posY, posZ].gameObject.GetComponent<EarthPlatform>() != null)
+            {
+                earthPlaced = false;
+            }
+            DestroyImmediate(_gameObjects[posX, posY, posZ].gameObject);
 		}
 
 		// Rebuild the level (e.g. after using undo/redo)
@@ -434,7 +457,7 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 				_undoRedoFunctionality.PushLevel(_level);
 				// If the position is not empty, destroy the the current element (using gameObjects array)
 				if (_level[posX, posY, selectedLayer] != Empty) {
-					DestroyBlock(posX, posY, selectedLayer);
+                    DestroyBlock(posX, posY, selectedLayer);
 				}
 
 				// Create the new game object
