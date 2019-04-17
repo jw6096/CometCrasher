@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public int currentLevel;
     bool[] unlockedLevels;
 
+    int savedLevel;
+
     public bool[] UnlockedLevels
     {
         get { return unlockedLevels; }
@@ -24,11 +26,11 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         //Make sure only one instance exists, singleton
-        if(GameManager.instance == null)
+        if (GameManager.instance == null)
         {
             GameManager.instance = this;
         }
-        else if(GameManager.instance != this)
+        else if (GameManager.instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -50,14 +52,18 @@ public class GameManager : MonoBehaviour
     }
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
+        if (PlayerPrefs.HasKey("Level"))
+            LoadLevel(PlayerPrefs.GetInt("Level"));
+        else
+            SceneManager.LoadScene(0);
         currentLevel = 1;
-	}
+    }
 
     public void UnlockLevel(int level)
     {
-        unlockedLevels[level-1] = true;
+        unlockedLevels[level - 1] = true;
     }
 
     public void NextLevel()
@@ -78,6 +84,8 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Level does not exist: given level exceeds levelCount");
         }
+
+        PlayerPrefs.SetInt("Level", currentLevel);
     }
     public void LoadLevel(string levelName)
     {
@@ -89,7 +97,7 @@ public class GameManager : MonoBehaviour
         int lastLevel = 0;
         for (int i = 0; i < unlockedLevels.Length; i++)
         {
-            if(unlockedLevels[i] == false)
+            if (unlockedLevels[i] == false)
             {
                 LoadLevel(lastLevel);
                 return;
