@@ -9,6 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Tutorial01-Goal.unity
+    guid: 69941dbe001d90c40aea34354379d1b3
+  - enabled: 1
+    path: Assets/Scenes/Tutorial02-LandingPad.unity
+    guid: cc8b876b95efa13499398a289b61123c
+  - enabled: 1
+    path: Assets/Scenes/Tutorial03-LeftRight.unity
+    guid: 9ab624b12f4ec7249a71a7cd0df19ede
+  - enabled: 1
+    path: Assets/Scenes/Tutorial04-UpDown.unity
+    guid: f629acd2bb3cf2f468af4e73cdb97457
+  - enabled: 1
+    path: Assets/Scenes/Tutorial05-Bumper.unity
+    guid: 0bb26461ce803f842a0e1cf90e0a3b43
+  - enabled: 1
+    path: Assets/Scenes/Tutorial06-TransWall.unity
+    guid: 5ea62e1b37ff0c244a37bc628082ef09
+  - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: afbde8b8ff4849248b01ccae8f386b07
   - enabled: 1
