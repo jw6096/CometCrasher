@@ -237,10 +237,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
-    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
-      propertyPath: m_Name
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -284,6 +280,10 @@ PrefabInstance:
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
@@ -601,6 +601,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: f3ae4cd3a0b84c543a85e565cb7dfe7b,
         type: 3}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Text
+      value: This planet allows you to move in any direction after you land on it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2827625695283802925, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 58f940bda47c5ec48a900ef06f0118c8,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5a744f973a91743896536accf037fb, type: 3}
 --- !u!1001 &1150053079
@@ -610,10 +621,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 721959211}
     m_Modifications:
-    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
-      propertyPath: m_Name
-      value: Goal
-      objectReference: {fileID: 0}
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -658,6 +665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
 --- !u!4 &1150053080 stripped
@@ -673,10 +684,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 721959211}
     m_Modifications:
-    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
-      propertyPath: m_Name
-      value: Goal
-      objectReference: {fileID: 0}
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -720,6 +727,10 @@ PrefabInstance:
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
+      propertyPath: m_Name
+      value: Goal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
@@ -783,10 +794,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
-    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
-      propertyPath: m_Name
-      value: Goal
-      objectReference: {fileID: 0}
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -831,6 +838,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
 --- !u!4 &1570530267 stripped
@@ -846,10 +857,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 721959211}
     m_Modifications:
-    - target: {fileID: 1615363774100536, guid: a3a5e05680bdbb74d9750b4dec3f19aa, type: 3}
-      propertyPath: m_Name
-      value: LandingPad
-      objectReference: {fileID: 0}
     - target: {fileID: 4881621552582332, guid: a3a5e05680bdbb74d9750b4dec3f19aa, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.5
@@ -893,6 +900,10 @@ PrefabInstance:
     - target: {fileID: 4881621552582332, guid: a3a5e05680bdbb74d9750b4dec3f19aa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615363774100536, guid: a3a5e05680bdbb74d9750b4dec3f19aa, type: 3}
+      propertyPath: m_Name
+      value: LandingPad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3a5e05680bdbb74d9750b4dec3f19aa, type: 3}
@@ -991,10 +1002,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
-    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
-      propertyPath: m_Name
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.5
@@ -1039,6 +1046,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
 --- !u!4 &1856808039 stripped
@@ -1054,10 +1065,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
-    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
-      propertyPath: m_Name
-      value: Obstacle
-      objectReference: {fileID: 0}
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -1101,6 +1108,10 @@ PrefabInstance:
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
