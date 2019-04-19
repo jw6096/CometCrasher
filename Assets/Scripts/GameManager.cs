@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     public int currentLevel;
     bool[] unlockedLevels;
 
-    int savedLevel;
-
     public bool[] UnlockedLevels
     {
         get { return unlockedLevels; }
@@ -64,7 +62,10 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene(0);
         }
         else
+        {
+            unlockedLevels[0] = true;
             SceneManager.LoadScene(0);
+        }
     }
 
     public void UnlockLevel(int level)
@@ -74,7 +75,7 @@ public class GameManager : MonoBehaviour
 
     public void NextLevel()
     {
-        UnlockLevel(currentLevel + 1);
+        UnlockLevel(currentLevel);
         LoadLevel(currentLevel + 1);
         //currentLevel++;
 
@@ -117,10 +118,12 @@ public class GameManager : MonoBehaviour
 
     public void ResetData()
     {
-        //PlayerPrefs.SetInt("Level", 1);
+        PlayerPrefs.SetInt("Level", 1);
 
-        //for (int i = 0; i < levelCount; i++)
-            //unlockedLevels[i] = false;
+        for (int i = 0; i < levelCount; i++)
+            unlockedLevels[i] = false;
+
+        unlockedLevels[0] = true;
 
         SceneManager.LoadScene(0);
     }
