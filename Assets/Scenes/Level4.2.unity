@@ -1123,7 +1123,6 @@ Transform:
   - {fileID: 767470036}
   - {fileID: 1954546613}
   - {fileID: 1051421499}
-  - {fileID: 1385419261}
   - {fileID: 1215543361}
   - {fileID: 1646058435}
   - {fileID: 1785921331}
@@ -1142,6 +1141,7 @@ Transform:
   - {fileID: 1241035569}
   - {fileID: 1161219191}
   - {fileID: 1153892320}
+  - {fileID: 1385419261}
   - {fileID: 1184060941}
   - {fileID: 909233126}
   - {fileID: 1980871343}
@@ -1965,6 +1965,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 119.13904
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889597383764972, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761955356113103301, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5a744f973a91743896536accf037fb, type: 3}

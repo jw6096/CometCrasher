@@ -737,11 +737,191 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 119.13904
       objectReference: {fileID: 0}
+    - target: {fileID: 4178020822259085650, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178020822259085650, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 396
+      objectReference: {fileID: 0}
+    - target: {fileID: 4178020822259085650, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674997050017124823, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 84.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4674997050017124823, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 319.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114358452051840958, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 03e8c00154a69fa4091522ab9c9028cd,
+        type: 3}
+    - target: {fileID: 114358452051840958, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114640548262191602, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114640548262191602, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4efb65df2dbdad4a968d7505aae5eb5,
+        type: 3}
+    - target: {fileID: 114604893975873220, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3ae4cd3a0b84c543a85e565cb7dfe7b,
+        type: 3}
+    - target: {fileID: 114604893975873220, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114604893975873220, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9548309
+      objectReference: {fileID: 0}
+    - target: {fileID: 114604893975873220, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390278161871204, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3ae4cd3a0b84c543a85e565cb7dfe7b,
+        type: 3}
+    - target: {fileID: 114390278161871204, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390278161871204, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114390278161871204, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.98842716
+      objectReference: {fileID: 0}
+    - target: {fileID: 114228498397046914, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3ae4cd3a0b84c543a85e565cb7dfe7b,
+        type: 3}
+    - target: {fileID: 114208570697361672, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3ae4cd3a0b84c543a85e565cb7dfe7b,
+        type: 3}
+    - target: {fileID: 3017783383492431664, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: dcb368593084804478d011c18d668d56,
+        type: 3}
+    - target: {fileID: 3017783383492431664, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017783383492431664, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9696946
+      objectReference: {fileID: 0}
+    - target: {fileID: 3017783383492431664, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2751927418916259386, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 977e1cafe76adbb4db20fd03e9e179ca,
+        type: 3}
+    - target: {fileID: 2751927418916259386, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 828666259798225572, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Transition
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 828666259798225572, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d802948e29988dc47b78cc4c393335d6,
+        type: 3}
     - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
         type: 3}
       propertyPath: m_Text
-      value: This planet only lets you leave hen you're traveling up or down! Watch
+      value: This planet only lets you leave when you're traveling up or down! Watch
         out!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f3ae4cd3a0b84c543a85e565cb7dfe7b,
+        type: 3}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114889597383764972, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761955356113103301, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5a744f973a91743896536accf037fb, type: 3}

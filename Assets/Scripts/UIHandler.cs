@@ -46,7 +46,10 @@ public class UIHandler : MonoBehaviour
 
     public void LoadLevel(int level)
     {
-        GameManager.instance.LoadLevel(level);
+        if (level == 0)
+            GameManager.instance.LoadLevel(level);
+        else
+            GameManager.instance.LoadLevel(GameManager.instance.currentLevel);
     }
 
     public void ResumeGame()
@@ -70,5 +73,10 @@ public class UIHandler : MonoBehaviour
     {
         LevelFailedUI.SetActive(true);
         MenuUI.SetActive(false);
+    }
+
+    public void Reset()
+    {
+        GameManager.instance.ResetData();
     }
 }

@@ -54,16 +54,22 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (PlayerPrefs.HasKey("Level"))
-            LoadLevel(PlayerPrefs.GetInt("Level"));
+        if (PlayerPrefs.HasKey("Level") && PlayerPrefs.GetInt("Level") != 1)
+        {
+            currentLevel = PlayerPrefs.GetInt("Level");
+
+            for (int i = 0; i < currentLevel; i++)
+                UnlockLevel(i);
+
+            SceneManager.LoadScene(0);
+        }
         else
             SceneManager.LoadScene(0);
-        currentLevel = 1;
     }
 
     public void UnlockLevel(int level)
     {
-        unlockedLevels[level - 1] = true;
+        unlockedLevels[level] = true;
     }
 
     public void NextLevel()
@@ -71,6 +77,8 @@ public class GameManager : MonoBehaviour
         UnlockLevel(currentLevel + 1);
         LoadLevel(currentLevel + 1);
         //currentLevel++;
+
+        PlayerPrefs.SetInt("Level", currentLevel);
     }
 
     public void LoadLevel(int level)
@@ -78,14 +86,15 @@ public class GameManager : MonoBehaviour
         if (level <= levelCount)
         {
             SceneManager.LoadScene(level);
-            currentLevel = level;
+            currentLevel = PlayerPrefs.GetInt("Level");
+
+            if (level > currentLevel)
+                currentLevel = level;
         }
         else
         {
             Debug.Log("Level does not exist: given level exceeds levelCount");
         }
-
-        PlayerPrefs.SetInt("Level", currentLevel);
     }
     public void LoadLevel(string levelName)
     {
@@ -104,6 +113,16 @@ public class GameManager : MonoBehaviour
             }
             lastLevel++;
         }
+    }
+
+    public void ResetData()
+    {
+        //PlayerPrefs.SetInt("Level", 1);
+
+        //for (int i = 0; i < levelCount; i++)
+            //unlockedLevels[i] = false;
+
+        SceneManager.LoadScene(0);
     }
     /// <summary>
     /// Loads the current level (in-game levels, not scenes)
