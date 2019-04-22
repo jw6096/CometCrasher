@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2d5751a2c961df945a34295ccf5e576d, type: 3}
-  m_Name: ObstacleMoving
+  m_Name: ObstacleMovingHorizontal
   m_EditorClassIdentifier: 
   m_Prefabs:
-  - {fileID: 1899342316702366, guid: b1e46f1aab241064895206f7f0732c59, type: 3}
+  - {fileID: 1899342316702366, guid: 8ebffc715c46ee242877a397f54dc0eb, type: 3}
   m_PerlinScale: 0.5
   m_Z: 0
