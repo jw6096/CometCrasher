@@ -232,6 +232,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &374514925
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1892862151256756, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_Name
+      value: DummyGMObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773953338201576, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d5e9b20c56b60f43b0c8fef1d865577, type: 3}
 --- !u!1001 &560327773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -503,6 +560,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
+    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
+      propertyPath: m_Name
+      value: Goal
+      objectReference: {fileID: 0}
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.5
@@ -546,10 +607,6 @@ PrefabInstance:
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1462845977847294, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
-      propertyPath: m_Name
-      value: Goal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
@@ -666,17 +723,17 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 119.13904
       objectReference: {fileID: 0}
-    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
-        type: 3}
-      propertyPath: m_Text
-      value: 'This is a portal. Passing over it will teleport you somewhere else. '
-      objectReference: {fileID: 0}
     - target: {fileID: 2827625695283802925, guid: 3c5a744f973a91743896536accf037fb,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 92efebe556255e14d8703b29229e342f,
         type: 3}
+    - target: {fileID: 8817580202130484044, guid: 3c5a744f973a91743896536accf037fb,
+        type: 3}
+      propertyPath: m_Text
+      value: 'This is a portal. Passing over it will teleport you somewhere else. '
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c5a744f973a91743896536accf037fb, type: 3}
 --- !u!1001 &1110628915
@@ -686,6 +743,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
+    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -730,10 +791,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
-      propertyPath: m_Name
-      value: Obstacle
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
 --- !u!4 &1110628916 stripped
@@ -749,6 +806,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
+    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.5
@@ -792,10 +853,6 @@ PrefabInstance:
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
-      propertyPath: m_Name
-      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
@@ -941,6 +998,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 343237459}
     m_Modifications:
+    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
+      propertyPath: m_Name
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.5
@@ -984,10 +1045,6 @@ PrefabInstance:
     - target: {fileID: 4952369474790376, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1899342316702366, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
-      propertyPath: m_Name
-      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 435ad8e90a4005b468da2296df864fe1, type: 3}
@@ -1050,11 +1107,31 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1269673535830880, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
     - target: {fileID: 1291335945096256, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
-    - target: {fileID: 1026823732746208, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+    - target: {fileID: 1443697915611824, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466414781217906, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591008669953136, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124122818139392, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700795241376732, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
@@ -1070,31 +1147,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
-    - target: {fileID: 1124122818139392, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+    - target: {fileID: 1026823732746208, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
     - target: {fileID: 1001179844551900, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1269673535830880, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1700795241376732, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591008669953136, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1443697915611824, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466414781217906, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
