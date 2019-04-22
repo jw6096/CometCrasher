@@ -21,17 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial04-UpDown.unity
     guid: f629acd2bb3cf2f468af4e73cdb97457
   - enabled: 1
-    path: Assets/Scenes/Tutorial05-Bumper.unity
-    guid: 0bb26461ce803f842a0e1cf90e0a3b43
-  - enabled: 1
-    path: Assets/Scenes/Tutorial06-TransWall.unity
-    guid: 5ea62e1b37ff0c244a37bc628082ef09
-  - enabled: 1
     path: Assets/Scenes/Level01.unity
     guid: afbde8b8ff4849248b01ccae8f386b07
   - enabled: 1
     path: Assets/Scenes/Level02.unity
     guid: 3ba9160a5e349d74b875b8bc50638a60
+  - enabled: 1
+    path: Assets/Scenes/Tutorial05-Bumper.unity
+    guid: 0bb26461ce803f842a0e1cf90e0a3b43
   - enabled: 1
     path: Assets/Scenes/Level02.1.unity
     guid: 16a04eb025cfc374d83bca5cfa95b856
@@ -44,6 +41,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level04.unity
     guid: 72efdd958ca909b4b80878fa661701b7
+  - enabled: 1
+    path: Assets/Scenes/Tutorial06-TransWall.unity
+    guid: 5ea62e1b37ff0c244a37bc628082ef09
+  - enabled: 1
+    path: Assets/Scenes/Level4.2.unity
+    guid: 4ce21b267ab04cf40abd8a3eb4f308c8
   - enabled: 1
     path: Assets/Scenes/Level06.unity
     guid: 6aae6d172cf0372439fd7a9afbf0d0af
@@ -59,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level12.unity
     guid: 23ff0f34d3d1e404fa2f85c6e6147903
+  - enabled: 1
+    path: Assets/Scenes/Tutorial07-Portal.unity
+    guid: 2a3ea8a525942a741a532d0542d104d2
   m_configObjects: {}
