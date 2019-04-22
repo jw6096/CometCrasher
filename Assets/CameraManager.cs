@@ -19,6 +19,6 @@ public class CameraManager : MonoBehaviour
     {
         //if (Vector3.Magnitude(player.localPosition - transform.localPosition) )
 
-        transform.localPosition += new Vector3(player.localPosition.x - transform.localPosition.x, player.localPosition.y - transform.localPosition.y, 0) * Time.deltaTime * 5;
+        transform.localPosition += new Vector3(player.localPosition.x - transform.localPosition.x, player.localPosition.y - transform.localPosition.y, 0) * Time.deltaTime * 3;
     }
 }
