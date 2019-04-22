@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 using GracesGames.Common.Scripts;
 
@@ -7,7 +8,9 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts.UI {
 
 	public class UserInterface : MonoBehaviour {
 
-		// ----- PUBLIC VARIABLES -----
+        // ----- PUBLIC VARIABLES -----
+
+        public List<Button> myButtons = new List<Button>();
 
 		// Button Prefab used to create tile selection buttons for each GameObjects.
 		public GameObject ButtonPrefab;
@@ -92,6 +95,7 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts.UI {
 				button.transform.localScale = new Vector3(ButtonImageScale, ButtonImageScale, ButtonImageScale);
 				// Add a click handler to the button
 				button.GetComponent<Button>().onClick.AddListener(() => { _levelEditor.ButtonClick(index); });
+                myButtons.Add(button.GetComponent<Button>());
 				tileCounter++;
 			}
 		}

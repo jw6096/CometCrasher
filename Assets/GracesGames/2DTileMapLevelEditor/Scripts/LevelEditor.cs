@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 using System.Collections.Generic;
 
@@ -279,14 +280,6 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 			_previewTile = Instantiate(GetTiles()[_selectedTileIndex],
 				new Vector3(Input.mousePosition.x, Input.mousePosition.y, 100),
 				Quaternion.identity);
-            if(_previewTile.gameObject.GetComponent<Goal>() != null)
-            {
-                goalPlaced = true;
-            }
-            else if (_previewTile.gameObject.GetComponent<EarthPlatform>() != null)
-            {
-                earthPlaced = true;
-            }
             foreach (Collider2D c in _previewTile.GetComponents<Collider2D>())
             {
 				c.enabled = false;
@@ -333,8 +326,21 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 
 			// Set the value for the internal level representation
 			_level[xPos, yPos, zPos] = value;
-			// If the value is not empty, set it to the correct tile
-			if (value != Empty) {
+            if (_previewTile.gameObject.name == "Goal(Clone)")
+            {
+                goalPlaced = true;
+                GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[1].interactable = false;
+                SetSelectedTile(Empty);
+            }
+            else if (_previewTile.gameObject.name == "Start(Clone)")
+            {
+                earthPlaced = true;
+                GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[0].interactable = false;
+                SetSelectedTile(Empty);
+            }
+
+            // If the value is not empty, set it to the correct tile
+            if (value != Empty) {
 				BuildBlock(GetTiles()[value], xPos, yPos, zPos, GetLayerParent(zPos).transform);
 			}
 		}
@@ -404,13 +410,15 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 		}
 
 		private void DestroyBlock(int posX, int posY, int posZ) {
-            if (_gameObjects[posX, posY, posZ].gameObject.GetComponent<Goal>() != null)
+            if (_previewTile.gameObject.name == "Goal(Clone)")
             {
                 goalPlaced = false;
+                LevelEditorUiPrefab.GetComponent<UserInterface>().myButtons[1].interactable = true;
             }
-            else if (_gameObjects[posX, posY, posZ].gameObject.GetComponent<EarthPlatform>() != null)
+            else if (_previewTile.gameObject.name == "Start(Clone)")
             {
                 earthPlaced = false;
+                LevelEditorUiPrefab.GetComponent<UserInterface>().myButtons[0].interactable = true;
             }
             DestroyImmediate(_gameObjects[posX, posY, posZ].gameObject);
 		}

@@ -12,6 +12,7 @@ TagManager:
   - Music
   - MenuButton
   - TutorialUI
+  - LevelEditorUI
   layers:
   - Default
   - TransparentFX
