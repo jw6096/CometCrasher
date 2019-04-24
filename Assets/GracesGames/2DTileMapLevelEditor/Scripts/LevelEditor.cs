@@ -330,17 +330,30 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
             {
                 goalPlaced = true;
                 GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[1].interactable = false;
-                SetSelectedTile(Empty);
+                // If we hit nothing and previewTile is null, remove it
+                if (_previewTile != null)
+                {
+                    DestroyImmediate(_previewTile.gameObject);
+                    // Set selected tile and image to EMPTY
+                    SetSelectedTile(Empty);
+                }
             }
             else if (_previewTile.gameObject.name == "Start(Clone)")
             {
                 earthPlaced = true;
                 GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[0].interactable = false;
-                SetSelectedTile(Empty);
+                // If we hit nothing and previewTile is null, remove it
+				if (_previewTile != null)
+                {
+                    DestroyImmediate(_previewTile.gameObject);
+                    // Set selected tile and image to EMPTY
+                    SetSelectedTile(Empty);
+                }
             }
 
             // If the value is not empty, set it to the correct tile
-            if (value != Empty) {
+            if (value != Empty)
+            {
 				BuildBlock(GetTiles()[value], xPos, yPos, zPos, GetLayerParent(zPos).transform);
 			}
 		}
@@ -410,15 +423,15 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 		}
 
 		private void DestroyBlock(int posX, int posY, int posZ) {
-            if (_previewTile.gameObject.name == "Goal(Clone)")
+            if (_gameObjects[posX, posY, posZ].gameObject.name == "Goal")
             {
                 goalPlaced = false;
-                LevelEditorUiPrefab.GetComponent<UserInterface>().myButtons[1].interactable = true;
+                GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[1].interactable = true;
             }
-            else if (_previewTile.gameObject.name == "Start(Clone)")
+            else if (_gameObjects[posX, posY, posZ].gameObject.name == "Start")
             {
                 earthPlaced = false;
-                LevelEditorUiPrefab.GetComponent<UserInterface>().myButtons[0].interactable = true;
+                GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[0].interactable = true;
             }
             DestroyImmediate(_gameObjects[posX, posY, posZ].gameObject);
 		}
