@@ -65,4 +65,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial07-Portal.unity
     guid: 2a3ea8a525942a741a532d0542d104d2
+  - enabled: 1
+    path: Assets/Scenes/Level24.unity
+    guid: 8a523c4266e75a14db7c5084cc45629c
+  - enabled: 1
+    path: Assets/Scenes/Level25.unity
+    guid: 39696f33d765efa4fb8861c071c19635
+  - enabled: 1
+    path: Assets/Scenes/Level23.unity
+    guid: 39a7987a429edd249ade4e8aed20887c
   m_configObjects: {}
