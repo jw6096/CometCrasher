@@ -108,4 +108,12 @@ public class Obstacle : MonoBehaviour
 		//Debug.Log("Sending death message");
 		collision.gameObject.SendMessage("kill");
 	}
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        collision.gameObject.SendMessage("kill");
+
+        moveForce = 0.0f;
+        rb.velocity = Vector2.zero;
+    }
 }
