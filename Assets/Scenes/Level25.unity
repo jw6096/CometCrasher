@@ -963,31 +963,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1269673535830880, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
     - target: {fileID: 1291335945096256, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
-    - target: {fileID: 1443697915611824, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1466414781217906, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1591008669953136, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1124122818139392, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
-      propertyPath: m_TagString
-      value: Backdrop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1700795241376732, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+    - target: {fileID: 1026823732746208, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
@@ -1003,11 +983,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
-    - target: {fileID: 1026823732746208, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+    - target: {fileID: 1124122818139392, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
     - target: {fileID: 1001179844551900, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269673535830880, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700795241376732, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591008669953136, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443697915611824, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466414781217906, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_TagString
       value: Backdrop
       objectReference: {fileID: 0}
@@ -1026,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4900845408372342, guid: 13f5d919f594abc41ab08dd49b784709, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.5
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 4900845408372342, guid: 13f5d919f594abc41ab08dd49b784709, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2406,7 +2406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.5
+      value: -6.5
       objectReference: {fileID: 0}
     - target: {fileID: 4554081934632522, guid: 0bd8a234c7824994e82d709b934302a6, type: 3}
       propertyPath: m_LocalPosition.y
