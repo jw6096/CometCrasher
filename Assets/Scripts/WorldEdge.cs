@@ -19,10 +19,12 @@ public class WorldEdge : MonoBehaviour {
 
         foreach (GameObject gObject in gameObjects)
         {
-            if (gObject.activeInHierarchy && gObject.tag != "Backdrop" && gObject.tag != "LevelFailedUI" && gObject.tag != "LevelCompleteUI" && gObject.tag != "TutorialUI")
+            if (gObject.activeInHierarchy && gObject.tag != "Backdrop" && gObject.tag != "LevelFailedUI" && gObject.tag != "LevelCompleteUI" && gObject.tag != "TutorialUI" && gObject.tag != "MenuButton")
             {
                 float x = gObject.transform.position.x;
                 float y = gObject.transform.position.y;
+
+                //Debug.Log("(" + x + ", " + y + ")" + gameObject);
 
                 //Debug.Log(gObject + ": " + x + ", " + y);
 
