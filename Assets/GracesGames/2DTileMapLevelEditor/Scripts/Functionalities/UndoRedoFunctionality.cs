@@ -69,7 +69,7 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts.Functionalities {
 			// Get the last level entry
 			int[,,] undoLevel = _undoStack.Pop();
 			if (undoLevel != null) {
-				// Set the level to the previous state
+                // Set the level to the previous state
 				_levelEditor.SetLevel(undoLevel);
 			}
 		}

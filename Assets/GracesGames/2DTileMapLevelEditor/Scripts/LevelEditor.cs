@@ -411,16 +411,26 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 			return emptyLevel;
 		}
 
-		private void BuildBlock(Transform toCreate, int xPos, int yPos, int zPos, Transform parent) {
-			//Create the object we want to create
-			Transform newObject = Instantiate(toCreate, new Vector3(xPos, yPos, toCreate.position.z), Quaternion.identity);
-			//Give the new object the same name as our tile prefab
-			newObject.name = toCreate.name;
-			// Set the object's parent to the layer parent variable so it doesn't clutter our Hierarchy
-			newObject.parent = parent;
-			// Add the new object to the gameObjects array for correct administration
-			_gameObjects[xPos, yPos, zPos] = newObject;
-		}
+        private void BuildBlock(Transform toCreate, int xPos, int yPos, int zPos, Transform parent) {
+            //Create the object we want to create
+            Transform newObject = Instantiate(toCreate, new Vector3(xPos, yPos, toCreate.position.z), Quaternion.identity);
+            //Give the new object the same name as our tile prefab
+            newObject.name = toCreate.name;
+            // Set the object's parent to the layer parent variable so it doesn't clutter our Hierarchy
+            newObject.parent = parent;
+            // Add the new object to the gameObjects array for correct administration
+            _gameObjects[xPos, yPos, zPos] = newObject;
+            if (toCreate.gameObject.name == "Goal")
+            {
+                goalPlaced = true;
+                GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[1].interactable = false;
+            }
+            else if (toCreate.gameObject.name == "Start")
+            {
+                earthPlaced = true;
+                GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[0].interactable = false;
+            }
+        }
 
 		private void DestroyBlock(int posX, int posY, int posZ) {
             if (_gameObjects[posX, posY, posZ].gameObject.name == "Goal")
@@ -440,7 +450,11 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 		// Reset the Transforms and Layer, then loop trough level array and create blocks
 		private void RebuildGameObjects() {
 			ResetTransformsAndLayers();
-			for (int x = 0; x < Width; x++) {
+            earthPlaced = false;
+            goalPlaced = false;
+            GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[0].interactable = true;
+            GameObject.FindWithTag("LevelEditorUI").GetComponent<UserInterface>().myButtons[1].interactable = true;
+            for (int x = 0; x < Width; x++) {
 				for (int y = 0; y < Height; y++) {
 					for (int z = 0; z < Layers; z++) {
 						if (_level[x, y, z] != Empty) {
@@ -449,6 +463,7 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 					}
 				}
 			}
+
 		}
 
 		// Fill from position recursively. Only fill if the position is valid and empty
