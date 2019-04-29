@@ -892,15 +892,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4620707723913024, guid: 0d28c9bbbf70f0041901958061711089, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.4277544
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4620707723913024, guid: 0d28c9bbbf70f0041901958061711089, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 11.127438
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4620707723913024, guid: 0d28c9bbbf70f0041901958061711089, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.234375
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4620707723913024, guid: 0d28c9bbbf70f0041901958061711089, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1837,7 +1837,7 @@ GameObject:
   - component: {fileID: 1627563794}
   m_Layer: 0
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Backdrop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2002,6 +2002,54 @@ PrefabInstance:
     - target: {fileID: 4839494326789668, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291335945096256, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026823732746208, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1657300407313828, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1880084752784534, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039262217207612, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1124122818139392, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001179844551900, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269673535830880, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1700795241376732, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1591008669953136, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1443697915611824, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466414781217906, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
+      propertyPath: m_TagString
+      value: Backdrop
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a46d343d39c27bf40806b616e019c0e1, type: 3}
