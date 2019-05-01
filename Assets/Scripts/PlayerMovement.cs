@@ -47,7 +47,6 @@ public class PlayerMovement : MonoBehaviour {
         float v = Input.GetAxis("Vertical");
  
         sinceCameraZoom += Time.deltaTime;
-
         if (!flying)
         {
 #if UNITY_EDITOR

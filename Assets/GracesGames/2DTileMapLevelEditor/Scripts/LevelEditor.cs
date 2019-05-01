@@ -56,13 +56,13 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 
 		// The list of tiles the user can use to create maps
 		// Public so the user can add all user-created prefabs
-		public Tileset Tileset;
+		//public Tileset Tileset;
 
         // If the earth has been placed yet or not -- REQUIRED FOR LEVEL TO BE VALID
-        bool earthPlaced = false;
+        public bool earthPlaced = false;
 
         // If the goal has been placed yet or not -- REQUIRED FOR LEVEL TO BE VALID
-        bool goalPlaced = false;
+        public bool goalPlaced = false;
 
         // ----- PRIVATE VARIABLES -----
 
@@ -70,7 +70,7 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
         private bool _scriptEnabled = true;
 
 		// Private variable to save the list of Transforms of the public Tileset
-		private List<Transform> _tiles;
+		public List<Transform> _tiles;
 
 		// The user interface script for the Level Editor
 		private UserInterface _uiScript;
@@ -136,13 +136,14 @@ namespace GracesGames._2DTileMapLevelEditor.Scripts {
 			Width = Mathf.Clamp(Width, 1, Width);
 			Height = Mathf.Clamp(Height, 1, Height);
 			Layers = Mathf.Clamp(Layers, 1, Layers);
-
+            /*
 			if (Tileset == null) {
 				_tiles = new List<Transform>();
 				Debug.LogError("No valid Tileset found");
 			} else {
 				_tiles = Tileset.Tiles;
 			}
+            */
 		}
 
 		// Set the start path for the save and load functionality

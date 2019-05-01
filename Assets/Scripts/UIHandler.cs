@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+using GracesGames._2DTileMapLevelEditor.Scripts;
+
 /// <summary>
 /// Dummy script that handles UI and refers scene management calls to the GameManager singleton
 /// </summary>
@@ -13,6 +15,7 @@ public class UIHandler : MonoBehaviour
     private GameObject LevelFailedUI;
     private GameObject TutorialUI;
     private GameObject MenuUI;
+    public GameObject player;
 
     public GameManager GameManagerInstance
     {
@@ -70,6 +73,20 @@ public class UIHandler : MonoBehaviour
     {
         LevelFailedUI.SetActive(true);
         MenuUI.SetActive(false);
+    }
+
+    public void Play()
+    {
+        if(GameObject.FindWithTag("LevelEditor").GetComponent<LevelEditor>().earthPlaced == true &&
+            GameObject.FindWithTag("LevelEditor").GetComponent<LevelEditor>().goalPlaced == true)
+        {
+            //Destroy(Camera.main);
+            Destroy(GameObject.FindWithTag("LevelEditor"));
+            Destroy(GameObject.Find("Canvas"));
+            Destroy(GameObject.Find("EventSystem"));
+            GameObject start = GameObject.Find("Start");
+            Instantiate(player, start.transform.position, Quaternion.identity);
+        }
     }
 
     public void Reset()
