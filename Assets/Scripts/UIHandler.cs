@@ -77,7 +77,7 @@ public class UIHandler : MonoBehaviour
 
     public void Play()
     {
-        if(GameObject.FindWithTag("LevelEditor").GetComponent<LevelEditor>().earthPlaced == true &&
+        if (GameObject.FindWithTag("LevelEditor").GetComponent<LevelEditor>().earthPlaced == true &&
             GameObject.FindWithTag("LevelEditor").GetComponent<LevelEditor>().goalPlaced == true)
         {
             //Destroy(Camera.main);
