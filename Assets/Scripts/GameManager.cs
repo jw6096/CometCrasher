@@ -134,4 +134,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(currentLevel);
     }
+
+    public void RestartLevel()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
+    }
 }

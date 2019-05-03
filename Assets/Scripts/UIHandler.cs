@@ -93,4 +93,9 @@ public class UIHandler : MonoBehaviour
     {
         GameManager.instance.ResetData();
     }
+
+    public void RestartLevel()
+    {
+        GameManager.instance.RestartLevel();
+    }
 }
