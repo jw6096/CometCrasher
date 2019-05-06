@@ -1717,7 +1717,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -388.61, y: 246.53}
+  m_AnchoredPosition: {x: -458, y: 200}
   m_SizeDelta: {x: 75.17, y: 23.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483058043
@@ -2926,6 +2926,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114653931306240094, guid: 6ddeb1349ecfafc4f9961c0058687b88,
+        type: 3}
+      propertyPath: levelCount
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4542193549398146, guid: 6ddeb1349ecfafc4f9961c0058687b88, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2957,11 +2962,6 @@ PrefabInstance:
     - target: {fileID: 4542193549398146, guid: 6ddeb1349ecfafc4f9961c0058687b88, type: 3}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114653931306240094, guid: 6ddeb1349ecfafc4f9961c0058687b88,
-        type: 3}
-      propertyPath: levelCount
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ddeb1349ecfafc4f9961c0058687b88, type: 3}
